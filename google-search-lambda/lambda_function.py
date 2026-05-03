@@ -23,7 +23,7 @@ def lambda_handler(event, context):
     response = requests.get(url, headers=HEADERS, timeout=10)
 
     logger.info(
-        "Response received with message | status=%d | size_bytes=%d",
+        "Response received with message.. | status=%d | size_bytes=%d",
         response.status_code,
         len(response.content),
     )
