@@ -17,7 +17,10 @@ HEADERS = {
 def lambda_handler(event, context):
     query = event.get("query", "AWS Lambda")
     url = f"https://www.google.com/search?q={requests.utils.quote(query)}"
+    
+    Google = "My google message"
 
+    logger.info(f"My google message is {Google}")
     logger.info("Sending request to Google Search | query=%s | url=%s", query, url)
 
     response = requests.get(url, headers=HEADERS, timeout=10)
